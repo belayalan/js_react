@@ -1,53 +1,28 @@
 'use strict';
 
-//деструктизация объектов Е
-const options = {
-  name: 'test',
-  width: 1024,
-  height: 1024,
-  colors: {
-    border: 'black',
-    bg: 'red'
-  },
-  makeTest: function() { // созданный метод которые работает внутри options
-    console.log('test');
-  }
-};
+const arr = [1, 2, 13, 36, 18];
+arr.sort(compareNum);
+console.log(arr);
 
-options.makeTest(); //() - запуск
+function compareNum(a, b) {
+    return a - b;
+}
 
-const {border, bg} = options.colors;   //струкруа из которой будет извлечены объекты . деструктуировать
-console.log(border);
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join('; '));
 
+// console.log(arr.length);
+// arr.pop(); //удаляет жлемент в конец массива
+// arr.push(10); //добавля элеме в конец масс
+// console.log(arr);
 
+// arr.forEach(function(item, i, arr) { //первый элемент массива, второй счетчик, третий ссылка на массив
+// console.log(`${i}: ${item} внутри массива ${arr}`)
+// }); //перебор массив
 
-
-
-// console.log(Object.keys(options).length); //получение колиечства элементов внутри обхекта
-
-
-
-
-
-
-
-// console.log(options.name);
-
-// delete options.name;
-
-// console.log(options);
-
-// let counter = 0; //переменная счетчик, будет считать сколько свойств было внутри
-// for (let key in options) { //выберет значения в options
-//   if (typeof(options[key]) === 'object') { //проверка является ли объектом, чтобы не было проблем
-//     for (let i in options[key]) { //задает переменную и проверяет внутри нее 
-//       console.log(`свойство ${i} имеет значение ${options[key][i]}`); //выбирает значение из новой переменной и проверяет сразу два переменных
-//       counter++; //изза развилки 
-//     } 
-//   } else {
-//       console.log(`свойство ${key} имеет значение ${options[key]}`); //выбирает значения из переменной глобальной
-//       counter++; //
-//     }
+// for (let value of arr) {
+//   console.log(value);
 // }
-// console.log(counter);
 
