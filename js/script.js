@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 let numberOfFilms;
 
@@ -9,7 +9,6 @@ function start () {
       numberOfFilms = +prompt('Сколько фильмов посмотрели?', '');
     }
 }
-
 start();
 
 const personalMovieDB = {
@@ -64,4 +63,3 @@ function writeYourGenres() {
    }
 }
 writeYourGenres();
-
