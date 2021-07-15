@@ -1,19 +1,13 @@
 'use strict';
 
-const soldier = {
-    health: 400,
-    armor: 100,
-    sayHello: function() {
-        console.log('Hello');
-    }
-};
+let arr = [1,2,5,9,4,13,4,10];
 
-const john = Object.create(soldier); //создание нового обхекта джон который будетпрототипно наследоваться от солдата
+for (i = 0; i < arr.length; i++) {
+  if (arr[i] = 4) {
+    console.log('есть!');
+    break;
+  } else {
+      console.log('error');
+  }
 
-// const john = {
-//     health: 100
-// };
-
-// Object.setPrototypeOf(john, soldier); //получение прототип для джона
-
-john.sayHello();
+}
