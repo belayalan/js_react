@@ -1,13 +1,20 @@
 'use strict';
 
-let arr = [1,2,5,9,4,13,4,10];
+// // 1)
+// let x = 5;
 
-for (i = 0; i < arr.length; i++) {
-  if (arr[i] = 4) {
-    console.log('есть!');
-    break;
-  } else {
-      console.log('error');
-  }
+// alert(x++); //подтверждение 5ки
 
-}
+// 2)
+
+// let y = 1; let x = y = 2; alert(x);
+
+// console.log([] + 1 + 2);
+
+// alert("1"[0]);
+
+// console.log(2 && 1 && null && 0 && underfined);
+// и запинается на лжи
+// или запинается в правде
+
+// console.log('Ёжик' > 'яблоко'); //
