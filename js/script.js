@@ -1,23 +1,35 @@
-'use strict';
+   
+   const btn = document.querySelector('.btn');
+    let timer,
+        i = 0;
 
-//touchstart начало пальца
-// touch move движение пальца
-// touchend
-// touchenter как только палец зашел на элемент
-// touchlevae продолжил скользить палец за пределы элемента
-// touchcancel точка соприкосновения больше не регистрируется
+    function myAnim() {
+      const elem = document.querySelector('.box');
+      let pos = 0;
 
-window.addEventListener('DOMContentLoaded', () => {
-  const box = document.querySelector('.box');
+      const id = setInterval(frame, 10);
+      function frame () {
+        if (pos == 300) {
+          clearInterval();
+        } else {
+          pos++;
+          elem.style.bottom = pos + "px";
+          elem.style.right = pos + "px";
+        }
+      }
+    }
 
-  box.addEventListener('touchmove', (e) => {
-        e.preventDefault();
+btn.addEventListener('click', myAnim);
 
-       
-        console.log(e.targetTouches[0].pageX);
-  });
-});
-
-//touches колво пальцев
-// targettouches
-// changeTouches
+// function logger () {
+//   if (i === 3) {
+//     clearInterval(timer);
+//     }
+//     console.log('object');
+//     i++;
+//   }
+  
+// let  id = setTimeout(function log() {
+//   console.log('object');
+//   id = setTimeout(log, 500);
+// }, 500);
