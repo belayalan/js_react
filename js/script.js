@@ -1,35 +1,27 @@
-   
-   const btn = document.querySelector('.btn');
-    let timer,
-        i = 0;
+const now = new Date(); //конструктор даты
+// можно вложить строчные данные и прямые данные
+// год передаю в 2020 формате !не20
+// месяц начинается с 0 
+console.log(now.setHours(18)); //установка даты
+console.log(now);
 
-    function myAnim() {
-      const elem = document.querySelector('.box');
-      let pos = 0;
 
-      const id = setInterval(frame, 10);
-      function frame () {
-        if (pos == 300) {
-          clearInterval();
-        } else {
-          pos++;
-          elem.style.bottom = pos + "px";
-          elem.style.right = pos + "px";
-        }
-      }
-    }
+// console.log(now.getFullYear()); // год
+// console.log(now.getMonth()); // мес
+// console.log(now.getDate()); // дата
+// console.log(now.getDay()); // день недели, начинается с вск
+// console.log(now.getUTCHours());
 
-btn.addEventListener('click', myAnim);
+// console.log(now.getTimezoneOffset()); //разница между часовы поясом и ЮТС
 
-// function logger () {
-//   if (i === 3) {
-//     clearInterval(timer);
-//     }
-//     console.log('object');
-//     i++;
-//   }
-  
-// let  id = setTimeout(function log() {
-//   console.log('object');
-//   id = setTimeout(log, 500);
-// }, 500);
+// console.log(now.getTime()); // колво милисекунд которое прошло
+
+let start = new Date();
+
+for (let i = 0; i < 100000; i++) {
+  let some = i**3; // ** возведение в степерь
+}
+
+let end = new Date();
+
+alert(`цикл работает за ${end - start} мс`) //проверка за сколько выполняется 
